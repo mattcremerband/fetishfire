@@ -1,11 +1,17 @@
-import styles from './BaseTemplate.module.css';
+import { createStyles } from '@mantine/core';
 
 export interface IBaseTemplate {
   sampleTextProp: string;
 }
 
+const useStyles = createStyles((theme) => ({
+  base: {},
+}));
+
 const BaseTemplate: React.FC<IBaseTemplate> = ({ sampleTextProp }) => {
-  return <div className={styles.container}>{sampleTextProp}</div>;
+  const { classes, cx } = useStyles();
+
+  return <div className={classes.base}>{sampleTextProp}</div>;
 };
 
 export default BaseTemplate;

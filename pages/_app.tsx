@@ -1,7 +1,13 @@
+import { MantineProvider } from '@mantine/core';
 import type { AppProps } from 'next/app';
+import { Montserrat } from 'next/font/google';
 import '../pages/globals.css';
 import { NextPageWithLayout } from './page';
-import { MantineProvider } from '@mantine/core';
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 interface AppPropsWithLayout extends AppProps {
   Component: NextPageWithLayout;
@@ -12,17 +18,18 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout || ((page) => page);
 
   return getLayout(
-    <MantineProvider
+    <div className={montserrat.className}>
+      <MantineProvider
         withGlobalStyles
         withNormalizeCSS
         theme={{
           colorScheme: 'light',
         }}
       >
-      <Component {...pageProps} />
-    </MantineProvider>
+        <Component {...pageProps} />
+      </MantineProvider>
+    </div>
   );
-
 }
 
 export default MyApp;

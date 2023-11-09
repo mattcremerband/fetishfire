@@ -1,3 +1,29 @@
-@tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.animate {
+  transform: translateX(-150%);
+  opacity: 0;
+}
+
+.slideIn {
+  transform: translateX(0) !important;
+  opacity: 1 !important;
+  transition: all 1s ease-in-out !important;
+}
+
+.animate.stagger:nth-child(1) {
+  transition-delay: 200ms;
+}
+.animate.stagger:nth-child(2) {
+  transition-delay: 400ms;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+  letter-spacing: -0.05em;
+  margin-bottom: 1rem;
+  margin-top: 150px;
+}

@@ -1,7 +1,16 @@
 {
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.organizeImports": true
+  },
   "workbench.colorCustomizations": {
-    "activityBar.background": "#271D79",
-    "titleBar.activeBackground": "#3628A9",
-    "titleBar.activeForeground": "#FBFBFE"
+    "activityBar.background": "#006682",
+    "titleBar.activeBackground": "#00b5fd",
+    "titleBar.activeForeground": "#FEFBFF"
+  },
+  "files.associations": {
+    "*.css": "tailwindcss"
   }
 }
