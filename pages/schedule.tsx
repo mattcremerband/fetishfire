@@ -131,7 +131,7 @@ const Schedule: NextPageWithLayout = () => {
     <Container>
       <h1>Training Schedule</h1>
 
-      <section className="basis-full">
+      <section className="basis-full overflow-x-auto">
         <Table striped highlightOnHover withColumnBorders>
           <thead>
             <tr>

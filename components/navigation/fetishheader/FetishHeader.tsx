@@ -1,6 +1,7 @@
 import {
   Burger,
   Container,
+  Drawer,
   Group,
   Header,
   createStyles,
@@ -97,7 +98,7 @@ const FetishHeader: React.FC<IFetishHeader> = ({
     { link: 'contact', label: 'Contact' },
   ];
 
-  const [opened, { toggle }] = useDisclosure(false);
+  const [opened, handlers] = useDisclosure(false);
   const [active, setActive] = useState<any>(null);
   const { classes, cx } = useStyles();
 
@@ -110,6 +111,22 @@ const FetishHeader: React.FC<IFetishHeader> = ({
       })}
       onClick={() => {
         setActive(link.link);
+      }}
+    >
+      {link.label}
+    </Link>
+  ));
+
+  const itemsMobile = links.map((link) => (
+    <Link
+      key={link.label}
+      href={link.link}
+      className={`${cx(classes.link, {
+        [classes.linkActive]: active === link.link,
+      })} w-full mb-2`}
+      onClick={() => {
+        setActive(link.link);
+        handlers.close();
       }}
     >
       {link.label}
@@ -137,10 +154,33 @@ const FetishHeader: React.FC<IFetishHeader> = ({
 
         <Burger
           opened={opened}
-          onClick={toggle}
+          onClick={handlers.toggle}
           className={classes.burger}
           size="sm"
         />
+
+        <Drawer
+          opened={opened}
+          onClose={handlers.close}
+          size="xs"
+          withCloseButton={false}
+        >
+          <div className="flex flex-col w-full">
+            <Link
+              href="/"
+              onClick={() => {
+                setActive(null);
+              }}
+            >
+              <div className="flex flex-col items-center justify-center w-full mb-4">
+                <Image src={logo} alt="Fitness Fetish" width={80} height={80} />
+              </div>
+            </Link>
+            <div className="flex flex-col items-center justify-center w-full">
+              {itemsMobile}
+            </div>
+          </div>
+        </Drawer>
       </Container>
     </Header>
   );
