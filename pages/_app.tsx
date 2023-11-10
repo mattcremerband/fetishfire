@@ -1,4 +1,5 @@
 import { MantineProvider } from '@mantine/core';
+import { Analytics } from '@vercel/analytics/react';
 import type { AppProps } from 'next/app';
 import { Montserrat } from 'next/font/google';
 import '../pages/globals.css';
@@ -27,6 +28,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
         }}
       >
         <Component {...pageProps} />
+        <Analytics />
       </MantineProvider>
     </div>
   );

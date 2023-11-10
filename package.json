@@ -38,6 +38,7 @@
     "@tiptap/extension-link": "^2.0.0-beta.218",
     "@tiptap/react": "^2.0.0-beta.218",
     "@tiptap/starter-kit": "^2.0.0-beta.218",
+    "@vercel/analytics": "^1.1.1",
     "dayjs": "^1.11.7",
     "embla-carousel-react": "^7.0.9",
     "next": "^13.4.1",
