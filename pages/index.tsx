@@ -25,6 +25,11 @@ const useStyles = createStyles((theme) => ({
     '&:nth-of-type(2n)': {
       transform: 'translateX(+150%)',
     },
+
+    [theme.fn.smallerThan('md')]: {
+      paddingTop: '40px',
+      paddingBottom: '0',
+    },
   },
 
   content: {
@@ -44,6 +49,8 @@ const useStyles = createStyles((theme) => ({
     [theme.fn.smallerThan('md')]: {
       maxWidth: '100%',
       marginRight: 0,
+      marginLeft: 0,
+      marginTop: '20px',
     },
   },
 
@@ -66,10 +73,12 @@ const useStyles = createStyles((theme) => ({
   },
 
   image: {
-    flex: 1,
-
+    //flex: 1,
     [theme.fn.smallerThan('md')]: {
-      display: 'none',
+      maxWidth: '100%',
+      marginRight: 0,
+      marginLeft: 0,
+      marginTop: '40px',
     },
   },
 
@@ -93,10 +102,10 @@ const Home: NextPageWithLayout = () => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsIntersecting(entry.isIntersecting);
-      },
-      { rootMargin: '-300px' }
+      }
+      //{ rootMargin: '-300px' }
     );
-    console.log(isIntersecting);
+
     if (ref.current) {
       observer.observe(ref.current);
     }
@@ -126,7 +135,7 @@ const Home: NextPageWithLayout = () => {
 
       <div ref={ref}>
         <Container>
-          <div className={`${classes.inner} animate`}>
+          <div className={`${classes.inner} animate flex flex-col md:flex-row`}>
             <div className={`${classes.content} stagger`}>
               <Title className={classes.title}>
                 Training at Fitness{' '}
@@ -173,10 +182,12 @@ const Home: NextPageWithLayout = () => {
         </Container>
 
         <Container>
-          <div className={`${classes.inner} animate`}>
+          <div
+            className={`${classes.inner} animate flex-col-reverse md:flex-row`}
+          >
             <Image
               src="images/fetish-home2.jpg"
-              className={`${classes.image} animate stagger`}
+              className={`${classes.image} `}
             />
             <div className={`${classes.content2} animate stagger`}>
               <Title className={classes.title}>
