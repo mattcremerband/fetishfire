@@ -5,7 +5,7 @@ import {
   IconBrandYoutube,
 } from '@tabler/icons-react';
 import Image from 'next/image';
-import logo from '../../../public/fitness_fetish_logo.jpeg';
+import logo from '../../../public/fitness_fetish_logo.png';
 
 export interface IFooter extends React.ComponentPropsWithoutRef<'footer'> {}
 

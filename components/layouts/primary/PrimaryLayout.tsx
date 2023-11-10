@@ -18,10 +18,11 @@ const PrimaryLayout: React.FC<IPrimaryLayout> = ({ children }) => {
       <AppShell
         styles={{
           main: {
-            background:
-              theme.colorScheme === 'dark'
-                ? theme.colors.dark[8]
-                : theme.colors.gray[0],
+            colorScheme: 'light',
+            //background:
+            //  theme.colorScheme === 'dark'
+            //    ? theme.colors.dark[8]
+            //    : theme.colors.gray[0],
 
             padding: 0,
             minHeight: 'calc(100vh - 110px)',
