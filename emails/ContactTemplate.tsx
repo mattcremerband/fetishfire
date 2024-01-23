@@ -3,16 +3,32 @@ import { Html } from '@react-email/html';
 import { Section } from '@react-email/section';
 import { Text } from '@react-email/text';
 
-export default function ContactTemplate() {
+interface ContactEmailProps {
+  name: string;
+  email: string;
+  subject?: string;
+  message?: string;
+}
+
+export default function ContactTemplate({
+  name,
+  email,
+  subject,
+  message,
+}: ContactEmailProps) {
   return (
     <Html>
       <Section style={main}>
         <Container style={container}>
           <Text style={heading}>
-            A new message has been sent from the FitnessFetish website contact
-            form.
+            {subject ? subject : 'New message from ' + name}
           </Text>
-          <Text style={paragraph}>I wanna train please. gief deets.</Text>
+          <Text style={paragraph}>{message}</Text>
+          <Text style={paragraph}>
+            {name}
+            <br />
+            {email}
+          </Text>
         </Container>
       </Section>
     </Html>
@@ -31,7 +47,7 @@ const container = {
 };
 
 const heading = {
-  fontSize: '32px',
+  fontSize: '24px',
   lineHeight: '1.3',
   fontWeight: '700',
   color: '#484848',

@@ -9286,6 +9286,7 @@ __metadata:
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     react-email: "npm:^1.10.0"
+    react-google-recaptcha-v3: "npm:^1.10.1"
     sharp: "npm:^0.31.3"
     tailwindcss: "npm:^3.2.4"
     typescript: "npm:4.9.5"
@@ -10212,7 +10213,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hoist-non-react-statics@npm:^3.3.1":
+"hoist-non-react-statics@npm:^3.3.1, hoist-non-react-statics@npm:^3.3.2":
   version: 3.3.2
   resolution: "hoist-non-react-statics@npm:3.3.2"
   dependencies:
@@ -14285,6 +14286,18 @@ __metadata:
   bin:
     email: dist/source/index.js
   checksum: 135fbde7e1525599c4de379fdbc3ab27a672621062ed8a5c0faf411540a7fcbdf7412c1895908b90ebd46c5b8b6f4cc93f1c5acfe3b954fbcfb59219af385e7d
+  languageName: node
+  linkType: hard
+
+"react-google-recaptcha-v3@npm:^1.10.1":
+  version: 1.10.1
+  resolution: "react-google-recaptcha-v3@npm:1.10.1"
+  dependencies:
+    hoist-non-react-statics: "npm:^3.3.2"
+  peerDependencies:
+    react: ^16.3 || ^17.0 || ^18.0
+    react-dom: ^17.0 || ^18.0
+  checksum: fb7adc7f9f9580893f76b81efa1c00121b71d494ad679d0e561f48485e5a0396c239278964ea97a73b471dd1388a7d79eb355c7dac3800fd756320e99216e1de
   languageName: node
   linkType: hard
 

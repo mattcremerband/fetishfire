@@ -1,7 +1,9 @@
 import { MantineProvider } from '@mantine/core';
+import { Notifications } from '@mantine/notifications';
 import { Analytics } from '@vercel/analytics/react';
 import type { AppProps } from 'next/app';
 import { Montserrat } from 'next/font/google';
+import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import '../pages/globals.css';
 import { NextPageWithLayout } from './page';
 
@@ -27,7 +29,20 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
           colorScheme: 'light',
         }}
       >
-        <Component {...pageProps} />
+        <GoogleReCaptchaProvider
+          reCaptchaKey={
+            process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? 'NOT DEFINED'
+          }
+          scriptProps={{
+            async: false,
+            defer: true,
+            appendTo: 'body',
+            nonce: undefined,
+          }}
+        >
+          <Notifications />
+          <Component {...pageProps} />
+        </GoogleReCaptchaProvider>
         <Analytics />
       </MantineProvider>
     </div>

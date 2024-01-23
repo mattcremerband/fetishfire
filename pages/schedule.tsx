@@ -29,7 +29,7 @@ const Schedule: NextPageWithLayout = () => {
         { wednesday: '6:00 - 7:00', name: 'Functional Fitness' },
         { thursday: '6:00 - 7:00', name: 'Functional Fitness' },
         { friday: '6:00 - 7:00', name: 'Functional Fitness' },
-        { saturday: '6:00 - 7:00', name: 'Functional Fitness' },
+        { saturday: '', name: '' },
       ],
     },
     {
@@ -40,18 +40,7 @@ const Schedule: NextPageWithLayout = () => {
         { wednesday: '7:00 - 8:00', name: 'Functional Fitness' },
         { thursday: '7:00 - 7:35', name: 'Bootcamp/HIIT' },
         { friday: '7:00 - 8:00', name: 'Functional Fitness' },
-        { saturday: '7:00 - 8:00', name: 'Bootcamp/HIIT' },
-      ],
-    },
-    {
-      time: '8:00',
-      days: [
-        { monday: '', name: '' },
-        { tuesday: '', name: '' },
-        { wednesday: '', name: '' },
-        { thursday: '', name: '' },
-        { friday: '', name: '' },
-        { saturday: '8:00 - 8:30', name: 'Functional Fitness' },
+        { saturday: '7:00 - 8:00', name: 'Functional Fitness' },
       ],
     },
     {
@@ -80,9 +69,9 @@ const Schedule: NextPageWithLayout = () => {
       time: '17:30',
       days: [
         { monday: '17:30 - 18:15', name: 'Bootcamp/HIIT' },
-        { tuesday: '17:30 - 18:30', name: 'Functional Fitness' },
+        { tuesday: '17:30 - 18:30', name: 'Bootcamp/HIIT' },
         { wednesday: '17:30 - 18:15', name: 'Bootcamp/HIIT' },
-        { thursday: '17:30 - 18:30', name: 'Functional Fitness' },
+        { thursday: '17:30 - 18:30', name: 'Bootcamp/HIIT' },
         { friday: '', name: '' },
         { saturday: '', name: '' },
       ],
