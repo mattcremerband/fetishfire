@@ -1,8 +1,8 @@
 {
-  "name": "nextjs-boilerplate",
+  "name": "fitnessfetish-web",
   "author": "Matthew Cremer",
-  "description": "Nextjs boilerplate with typescript, eslint, and prettier",
-  "version": "0.1.0",
+  "description": "FitnessFetish website",
+  "version": "0.2.0",
   "private": true,
   "license": "MIT",
   "homepage": "https://github.com/mattcremerband",
@@ -19,7 +19,8 @@
     "prettier": "prettier --write .",
     "prepare": "husky install",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "preview-email": "email dev"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
@@ -33,6 +34,11 @@
     "@mantine/next": "^6.0.10",
     "@mantine/notifications": "^6.0.10",
     "@mantine/tiptap": "^6.0.10",
+    "@react-email/container": "^0.0.11",
+    "@react-email/html": "^0.0.7",
+    "@react-email/render": "^0.0.12",
+    "@react-email/section": "^0.0.11",
+    "@react-email/text": "^0.0.7",
     "@tabler/icons": "1.119.0",
     "@tabler/icons-react": "^2.30.0",
     "@tiptap/extension-link": "^2.0.0-beta.218",
@@ -42,8 +48,10 @@
     "dayjs": "^1.11.7",
     "embla-carousel-react": "^7.0.9",
     "next": "^13.4.1",
+    "nodemailer": "^6.9.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-email": "^1.10.0",
     "sharp": "^0.31.3"
   },
   "devDependencies": {
@@ -60,6 +68,7 @@
     "@storybook/react": "^6.5.16",
     "@storybook/testing-library": "^0.0.13",
     "@types/node": "18.11.19",
+    "@types/nodemailer": "^6.4.14",
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
     "autoprefixer": "^10.4.13",
@@ -77,5 +86,6 @@
   },
   "resolutions": {
     "webpack": "^5"
-  }
+  },
+  "packageManager": "yarn@4.0.2"
 }
