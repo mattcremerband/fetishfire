@@ -90,6 +90,39 @@ const Membership: NextPageWithLayout = () => {
           regular member.
         </p>
       </section>
+
+      <section className="basis-full">
+        <Text
+          variant="gradient"
+          gradient={{ from: '#02b3fb', to: 'blue', deg: 45 }}
+          fz="xl"
+          fw={700}
+        >
+          Fees
+        </Text>
+        <p>
+          <strong>Functional Fitness classes</strong>
+          <br />
+          <ul>
+            <li>2x Week: R850</li>
+            <li>3x Week: R950</li>
+            <li>Unlimited: R1050</li>
+          </ul>
+          <br />
+          <strong>Note:</strong> The Functional Fitness package also gives you
+          access to the Bootcamp/HIIT classes. On the 2x & 3x package you can
+          choose between Bootcamp/HIIT or Functional Fitness to make up your
+          weekly workout count.
+        </p>
+        <p>
+          <strong>Bootcamp/HIIT classes</strong>
+          <br />
+          <ul>
+            <li>2x Week: R550</li>
+            <li>3x Week: R650</li>
+          </ul>
+        </p>
+      </section>
     </Container>
   );
 };
